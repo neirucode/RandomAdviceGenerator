@@ -1,0 +1,111 @@
+:root {
+    /* colors */
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+
+    --fontFam: "Manrope";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    font-family: var(--fontFam);
+}
+
+
+.container {
+    background-color: var(--darkBlue);
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--fontFam);
+    width: fit-content;
+    aspect-ratio: 1/1;
+    max-width: 350px;
+    padding: 16px;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px 0 var(--grayishBlue);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid var(--darkGrayishBlue);
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.card h4 {
+    color: var(--neonGreen);
+}
+
+.card p {
+    color: var(--lightCyan);
+    font-size: 28px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.card button {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--neonGreen);
+    border: none;
+    height: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card button:active {
+    content: '';
+    box-shadow: 0px 0px 40px -1px var(--neonGreen);
+
+}
+
+.card span {
+    align-self: center;
+    font-size: 30px;
+    color: var(--darkBlue);
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 5px;
+    color: antiquewhite;
+    font-weight: 900;
+}
+
+.line::before,
+.line::after {
+    content: "";
+    width: 130px;
+    height: 1px;
+    background-color: white;
+    display: block;
+}
